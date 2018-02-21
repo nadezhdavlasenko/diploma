@@ -1,15 +1,16 @@
-package com.example.diploma.service;
+package com.example.diploma.service.impl;
 
 import com.example.diploma.Repository.CityRepository;
 import com.example.diploma.Repository.RadionuclideRepository;
 import com.example.diploma.Repository.TypeOfRiskRepository;
 import com.example.diploma.dto.CalculateRiskRequestDto;
 import com.example.diploma.dto.RiskCalculationResultDto;
+import com.example.diploma.service.RiskAssessmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RiskAssessmentServiceImpl implements RiskAssessmentService{
+public class RiskAssessmentServiceImpl implements RiskAssessmentService {
 
     private final TypeOfRiskRepository typeOfRiskRepository;
     private final RadionuclideRepository radionuclideRepository;
@@ -32,7 +33,7 @@ public class RiskAssessmentServiceImpl implements RiskAssessmentService{
                 typeOfRiskRepository.findOne(dto.getRiskTypeId()).getConsumptionAmount() *
                 time;
 
-        if (radionuclideRepository.findOne(dto.getRadionuclideId()).getId() == 0) {
+        if (radionuclideRepository.findOne(dto.getRadionuclideId()).getName().equals("Вдыхание воздуха")) {
 
 
             riskCalculationResultDto.setEffectiveDosage(totalActivityOfRadionuclide *
