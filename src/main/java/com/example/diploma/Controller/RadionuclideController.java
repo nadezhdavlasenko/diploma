@@ -1,12 +1,15 @@
 package com.example.diploma.Controller;
 
 
+import com.example.diploma.Entity.Radionuclide;
 import com.example.diploma.service.RadionuclideService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/radionuclide")
@@ -20,8 +23,7 @@ public class RadionuclideController {
     }
 
     @GetMapping
-    public String radionuclide(Model model){
-        model.addAttribute("list", radionuclideService.getAll());
-        return "radionuclide";
+    public List<Radionuclide> radionuclide(){
+        return radionuclideService.getAll();
     }
 }

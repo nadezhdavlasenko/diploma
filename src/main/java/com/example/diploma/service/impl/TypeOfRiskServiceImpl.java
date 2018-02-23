@@ -21,8 +21,8 @@ public class TypeOfRiskServiceImpl implements TypeOfRiskService {
 
     @Override
     public List<TypeOfRisk> getAll() {
-        List<TypeOfRisk> cityList = new ArrayList<>();
-        typeOfRiskRepository.findAll().forEach(cityList::add);
-        return cityList;
+        List<TypeOfRisk> typeOfRiskList = new ArrayList<>();
+        typeOfRiskRepository.findAll().forEach(typeOfRiskList::add);
+        return typeOfRiskList;
     }
 }

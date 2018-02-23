@@ -6,6 +6,7 @@ import com.example.diploma.service.RadionuclideService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -19,6 +20,8 @@ public class RadionuclideServiceImpl implements RadionuclideService {
     }
     @Override
     public List<Radionuclide> getAll() {
-        return null;
+        List<Radionuclide> radionuclideList = new ArrayList<>();
+        radionuclideRepository.findAll().forEach(radionuclideList::add);
+        return radionuclideList;
     }
 }
