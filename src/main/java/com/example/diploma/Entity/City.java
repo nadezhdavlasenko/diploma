@@ -20,4 +20,10 @@ public class City {
 
     @Column(name = "population")
     private long population;
+
+    @Column(name = "latitude")
+    private Double latitude;
+
+    @Column(name = "longitude")
+    private Double longitude;
 }
