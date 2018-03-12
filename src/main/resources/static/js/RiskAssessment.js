@@ -152,9 +152,7 @@ $(document).ready(function(){
                         console.log("cityId:" + cityId + "///" + "type:" + typeOfRiskId + "///" + "radionuclideId:" + radionuclideId);
 
 
-                        // var cityId = cities.map(function(value,index) { return value['id']; });
-                        // alert(cities.indexOf(cities.indexOf(city),'id'));
-                        //alert(cityId);
+
 
                         var calculateRiskRequestData = [cityId, typeOfRiskId, radionuclideId, specialActivity];
                         var riskCalculationResultData;
@@ -251,43 +249,10 @@ $(document).ready(function(){
                         });
 
 
-                    //     jQuery.ajax({
-                    //         url: 'http://localhost:8080/riskAssessment/calculate', //Controller to Get the
-                    //         //JsonResult From -- Json(jsonData, JsonRequestBehavior.AllowGet);
-                    //         type: "GET",
-                    //         data: calculateRiskRequestData,
-                    //         //dataType: "json",
-                    //         contentType: 'application/json; charset=utf-8', // dataType and contentType should be json
-                    //         // async: true,
-                    //         // processData: false,
-                    //         // cache: false,
-                    //         success: function (data) {      // on Success send the Json data
-                    //         // to the table by using loaddata function""
-                    //         //alert(data);
-                    //         // hot.loadData(data);
-                    //         // exampleConsole.innerHTML = 'Data loaded';
-                    //     },
-                    //     error: function (xhr) {
-                    //         alert('error');
-                    //     }
-                    // })
 
-                    // var totalCost = netTrade + deliveryCost + fees;
-                    // var netProfit = net - totalCost;
-                    // var percentProfit = netProfit / net;
-                    //
-                    //
-                    // $.when($.ajax('http://localhost:8080/riskAssessment/calculate') ).done(function() {
-                    //     hot.setDataAtCell(currentRow, 4, riskCalculationResultData[0]['effectiveDosage']);
-                    // });
 
                     }
-                    //
-                    //
-                    // hot.setDataAtCell(currentRow, 13, netProfit);
-                    //
-                    //
-                    // hot.setDataAtCell(currentRow, 14, percentProfit);
+
 
                 }
             }
@@ -313,18 +278,9 @@ function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: 6,
         center: {lat: 48.865427, lng: 34.196123},
-       // mapTypeId: 'terrain'
         //mapTypeId: 'satellite'
     });
 
-
-    // // Create a <script> tag and set the USGS URL as the source.
-    // var script = document.createElement('script');
-    //
-    // // This example uses a local copy of the GeoJSON stored at
-    // // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
-    // script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
-    // document.getElementsByTagName('head')[0].appendChild(script);
 
 }
 
